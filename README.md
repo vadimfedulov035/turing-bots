@@ -23,9 +23,9 @@ The robot programs consist of a sequence of instructions. Each robot executes th
 
 ## The Solution: Expanding Search
 
-Since the robots must use the same program and don't know where the treasure is, they need a systematic way to search. The implemented solution uses an expanding search pattern:
+Since the robots must use the same program and don't know where the treasure is, they need a systematic way to search. They also need an exit condition which can be met only when finding the treasure. The implemented solution uses an expanding search pattern, having special 0 line and starting execution from the 1 line:
 
-1.  **Check Current Location:** First, check if the robot starts on the "treasure" (ensure "treasure" is found even if generation went wrong).
+1.  **Check Current Location:** First, check if the robot starts on the treasure (ensure treasure is found even if generation went wrong).
 2.  **Expand Search:** The robot alternates directions (Right, Left, then Right...) and increases the number of steps taken in each direction (1 step, then 2 steps, then 3 steps, and so on).
 3.  **Why it Works:** Because the treasure is between the robots, this expanding search pattern guarantees that one of the robots will eventually step onto the treasure cell. Since both robots run the same program, they will both find it.
 4.  **Stopping:** When `IF FLAG` detects the treasure, the next instruction executed is `GOTO 0`. Line 0 contains another `GOTO 0`, creating an infinite waiting loop interpreted as a success, as 0 line is not accessible if condition was not met.
