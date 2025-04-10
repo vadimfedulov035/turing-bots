@@ -1,0 +1,100 @@
+# Widening ZigZag
+# Goal: Find hidden treasure on the field
+# Algorithm: move left and right in zigzag checking places; loop forever on successs
+
+GOTO 0                                          # 0: Endless waiting loop
+# -- Step 0: No movement
+IFFLAG                                          # 1: If found treasure
+GOTO 0                                          # 2: Success -> Waiting loop
+GOTO 4                                          # 3: Fail -> Next line
+
+# -- Step 1: 1 move to right
+MR                                              # 4: 
+IFFLAG                                          # 5: If found treasure
+GOTO 0                                          # 6: Success -> Waiting loop
+GOTO 8                                          # 7: Fail -> Next line
+
+# -- Step 2: 2 moves to left
+ML                                              # 8: 
+ML                                              # 9: 
+IFFLAG                                          # 10: If found treasure
+GOTO 0                                          # 11: Success -> Waiting loop
+GOTO 13                                         # 12: Fail -> Next line
+
+# -- Step 3: 3 moves to right
+MR                                              # 13: 
+MR                                              # 14: 
+MR                                              # 15: 
+IFFLAG                                          # 16: If found treasure
+GOTO 0                                          # 17: Success -> Waiting loop
+GOTO 19                                         # 18: Fail -> Next line
+
+# -- Step 4: 4 moves to left
+ML                                              # 19: 
+ML                                              # 20: 
+ML                                              # 21: 
+ML                                              # 22: 
+IFFLAG                                          # 23: If found treasure
+GOTO 0                                          # 24: Success -> Waiting loop
+GOTO 26                                         # 25: Fail -> Next line
+
+# -- Step 5: 5 moves to right
+MR                                              # 26: 
+MR                                              # 27: 
+MR                                              # 28: 
+MR                                              # 29: 
+MR                                              # 30: 
+IFFLAG                                          # 31: If found treasure
+GOTO 0                                          # 32: Success -> Waiting loop
+GOTO 34                                         # 33: Fail -> Next line
+
+# -- Step 6: 6 moves to left
+ML                                              # 34: 
+ML                                              # 35: 
+ML                                              # 36: 
+ML                                              # 37: 
+ML                                              # 38: 
+ML                                              # 39: 
+IFFLAG                                          # 40: If found treasure
+GOTO 0                                          # 41: Success -> Waiting loop
+GOTO 43                                         # 42: Fail -> Next line
+
+# -- Step 7: 7 moves to right
+MR                                              # 43: 
+MR                                              # 44: 
+MR                                              # 45: 
+MR                                              # 46: 
+MR                                              # 47: 
+MR                                              # 48: 
+MR                                              # 49: 
+IFFLAG                                          # 50: If found treasure
+GOTO 0                                          # 51: Success -> Waiting loop
+GOTO 53                                         # 52: Fail -> Next line
+
+# -- Step 8: 8 moves to left
+ML                                              # 53: 
+ML                                              # 54: 
+ML                                              # 55: 
+ML                                              # 56: 
+ML                                              # 57: 
+ML                                              # 58: 
+ML                                              # 59: 
+ML                                              # 60: 
+IFFLAG                                          # 61: If found treasure
+GOTO 0                                          # 62: Success -> Waiting loop
+GOTO 64                                         # 63: Fail -> Next line
+
+# -- Step 9: 9 moves to right
+MR                                              # 64: 
+MR                                              # 65: 
+MR                                              # 66: 
+MR                                              # 67: 
+MR                                              # 68: 
+MR                                              # 69: 
+MR                                              # 70: 
+MR                                              # 71: 
+MR                                              # 72: 
+IFFLAG                                          # 73: If found treasure
+GOTO 0                                          # 74: Success -> Waiting loop
+GOTO 76                                         # 75: Fail -> Next line
+
